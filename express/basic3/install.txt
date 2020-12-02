@@ -1,0 +1,11 @@
+npm init
+
+npm install express --save
+npm install ejs --save
+npm install body-parser --save
+npm install express-session --save
+npm install cookie-parser --save
+
+
+起動
+node app.js

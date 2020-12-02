@@ -1,0 +1,12 @@
+npm install express-generator -g
+
+ひな形の生成
+express --view=ejs
+
+npm install
+
+起動
+node ./bin/www
+
+http://localhost:3000/
+
