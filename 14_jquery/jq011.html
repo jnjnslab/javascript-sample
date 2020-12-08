@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //属性を取得する
+  var url1 = $("#mylink").attr("href");
+  console.log(url1);
+ 
+  var url2 = $("a").attr("href");
+  console.log(url2);
+});
+</script>
+</head>
+<body>
+ 
+<a href="http://www.yahoo.co.jp/" id="mylink">Yahoo</a>
+<a href="http://www.google.co.jp/">Google</a>
+ 
+</body>
+</html>

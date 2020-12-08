@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+ 
+  <form>
+    <input type="button" id="sample3" value="サンプル3">
+  </form>
+ 
+  <script>
+    $("#sample3").on("click", function () {
+      console.log('clicked');
+      $.ajax({
+        url: 'sample3.php',
+        type: "POST",
+        dataType: "json",
+        data: {
+          "myname": 'yamada',
+          "mypass": 'abcde'
+        },
+        success: function (data) {
+          if (data.result === "OK") {
+            console.log(data.message);
+          } else {
+            console.log("ログイン失敗");
+          }
+        }
+      });
+    });
+    </script>
+</body>
+</html>

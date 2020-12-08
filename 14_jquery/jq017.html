@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<style type="text/css">
+  .boldme {
+    font-weight: bold;
+  }
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //クラスを追加/削除する
+  $("#clickme").on("click", function () {
+    // ↓クリックする度に、ここの処理が呼ばれます
+    $("#clickme").toggleClass("boldme");
+  });
+});
+</script>
+</head>
+<body>
+  
+  <span id="clickme">【ここをクリックしてみて！】</span>
+ 
+</body>
+</html>

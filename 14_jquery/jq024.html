@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<style type="text/css">
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //フォームの値を取得する
+  // 選択しているセレクトボックスの値を取得
+  $("#get_val").on("click", function () {
+    var ret = $("#myselect").val();
+    alert(ret);
+  });
+  // 選択しているセレクトボックスのテキストを取得（おまけ）
+  $("#get_text").on("click", function () {
+    var ret = $("#myselect option:selected").text();
+    alert(ret);
+  });
+});
+</script>
+</head>
+<body>
+  
+  <form>
+    <select id="myselect" >
+      <option value="">下から選択して下さい</option>
+      <option value="taro">太郎</option>
+      <option value="jiro">次郎</option>
+      <option value="hanako">花子</option>
+    </select>
+   
+    <input type="button" value="valueを取得" id="get_val">
+    <input type="button" value="textを取得" id="get_text">
+  </form>
+ 
+</body>
+</html>

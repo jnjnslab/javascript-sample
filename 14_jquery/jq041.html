@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<style type="text/css">
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //要素を加工する
+  var arr0 = $("input:checked").map(function(){
+    return this.id;
+  }).get().join("-");
+  console.log(arr0);
+});
+</script>
+</head>
+<body>
+  
+<form>
+  <input type="checkbox" id="taro" checked>太郎
+  <input type="checkbox" id="jiro" checked>次郎
+  <input type="checkbox" id="saburo" checked>三郎
+  <input type="checkbox" id="yotarou">与太郎
+</form>
+ 
+</body>
+</html>

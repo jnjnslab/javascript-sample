@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<style type="text/css">
+ #outside {
+  font-size: 10px;
+  }
+  #inside {
+    font-size: 2em;
+  }
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //CSSの値を取得する
+  var ret1 = $("#outside").css("font-size");
+  var ret2 = $("#inside").css("font-size");
+  var ret3 = $("#outside").css("width");
+  console.log(ret1);
+  console.log(ret2);
+  console.log(ret3);
+});
+</script>
+</head>
+<body>
+  
+  <div id="outside">
+    <div id="inside">
+    </div>
+  </div>
+ 
+</body>
+</html>

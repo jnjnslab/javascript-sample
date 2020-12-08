@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //一般兄弟セレクター
+  $("h2 ~ p").css("color", "red");
+});
+</script>
+</head>
+<body>
+ 
+  <h2>宇宙について</h2>
+  <p>パラグラフ1</p>
+  <p>パラグラフ2</p>
+  <p>パラグラフ3</p>
+   
+  <h2>地球について</h2>
+  <p>パラグラフ4</p>
+  <p>パラグラフ5</p>
+  <p>パラグラフ6</p>
+   
+  <h2>平和について</h2>
+  <div>DIVです</div>
+  <p>パラグラフ7</p>
+  <p>パラグラフ8</p>
+  <p>パラグラフ9</p>
+ 
+</body>
+</html>

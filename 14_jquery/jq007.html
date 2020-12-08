@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //フィルター
+  $("li:eq(2)").css("font-size", "2em");
+  $("li:gt(2)").css("color", "red");
+  $("li:lt(2)").css("color", "blue");
+});
+</script>
+</head>
+<body>
+ 
+  <ul>
+    <li>太郎</li>
+    <li>次郎</li>
+    <li>三郎</li>
+    <li>四郎</li>
+    <li>五郎</li>
+  </ul>
+ 
+</body>
+</html>

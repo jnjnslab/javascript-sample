@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<style type="text/css">
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //フォームの値を取得する
+  $("#get_val").on("click", function () {
+    //ラジオボタン
+    var ret1 = $("input[type=radio][name=rdo]:checked").val();
+    console.log(ret1);
+    //チェックボックス
+    var arr_chk = $("input[type=checkbox][name=chk]:checked").map(
+      function () {return $(this).val(); }
+    ).toArray();
+    console.log(arr_chk);
+  });
+});
+</script>
+</head>
+<body>
+  
+<form>
+<input type="text" id="name">
+<br>
+<textarea id="naiyo" rows="5"></textarea>
+<br>
+<select id="select_one" >
+  <option value="">下から選択して下さい</option>
+  <option value="aa">ああ</option>
+  <option value="bb">いい</option>
+  <option value="cc">うう</option>
+</select>
+<br>
+<select id="select_multi" multiple="multiple">
+  <option value="">下から選択して下さい</option>
+  <option value="xx">かか</option>
+  <option value="yy">きき</option>
+  <option value="zz">くく</option>
+</select>
+<br>
+<input type="radio" name="rdo" value="あ">あ
+<input type="radio" name="rdo" value="い">い
+<input type="radio" name="rdo" value="う">う
+<br>
+<input type="checkbox" name="chk" value="か">か
+<input type="checkbox" name="chk" value="き">き
+<input type="checkbox" name="chk" value="く">く
+<br>
+<input type="button" value="valueを取得" id="get_val">
+</form>
+ 
+</body>
+</html>

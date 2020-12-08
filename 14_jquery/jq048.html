@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<style type="text/css">
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //イベントの伝搬の抑制
+  $("div").on("click",function(event) {
+    var cls = $(this).attr("class");
+    alert(cls);
+    event.stopPropagation();
+  });
+});
+</script>
+</head>
+<body>
+  
+  <div class="xxx">
+    xxx
+    <div class="yyy">
+      yyy
+      <div class="zzz">
+        zzz
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

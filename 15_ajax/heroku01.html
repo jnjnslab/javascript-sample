@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <form>
+    <input type="button" id="sample3" value="サンプル3">
+  </form>
+  <script>
+    $("#sample3").on("click", function () {
+      $.ajax({
+        url: 'https://xxxx.herokuapp.com/sample3.php',
+        type: "POST",
+        data: {
+          "myname": 'yamada',
+          "mypass": 'abcde'
+        },
+        dataType: "json",
+      })
+      .done(function(data) {
+        console.log( "success" );
+        if (data.result === "OK") {
+          console.log(data.message);
+        } else {
+          console.log("ログイン失敗");
+        }
+      })
+      .fail(function() {
+        console.log( "error" );
+      })
+      .always(function() {
+        console.log( "complete" );
+      });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<style type="text/css">
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //CSSの値を設定する
+  $('#zansho').css('background-color', 'pink');
+  $('#night').css({
+    backgroundColor: 'pink',
+    fontWeight: 'bold',
+    color: 'blue'
+  });
+});
+</script>
+</head>
+<body>
+  
+  <div id="zansho">残暑が厳しいざんしょ。</div>
+  <div id="night">今宵も暑い夏の夜</div>
+ 
+</body>
+</html>

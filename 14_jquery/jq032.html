@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<style type="text/css">
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //置換する
+  $('div.second').replaceWith('<h2>与太郎</h2>');
+});
+</script>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="inner first">太郎</div>
+    <div class="inner second">次郎</div>
+    <div class="inner third">三郎</div>
+  </div>
+ 
+</body>
+</html>

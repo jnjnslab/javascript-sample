@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<style type="text/css">
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //デフォールトの動作の抑制
+  $("input[type='submit']").on("click",function(event) {
+    if ($("#myname").val() !== "太郎") {
+      event.preventDefault();
+    }
+  });
+});
+</script>
+</head>
+<body>
+  
+  <form action="/">
+    <input type="text" name="myname" id="myname">
+    <input type="submit" value="送信">
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<style type="text/css">
+  .woman {
+    background-color: pink;
+  }
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //クラスを削除する
+  $("#hanako").removeClass("woman");
+});
+</script>
+</head>
+<body>
+  
+  <ul>
+    <li>太郎</li>
+    <li>次郎</li>
+    <li id="hanako" class="woman">花子</li>
+  </ul>
+ 
+</body>
+</html>

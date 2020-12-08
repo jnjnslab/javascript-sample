@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //フィルター
+  $("div:has(span)").css("color", "red");
+});
+</script>
+</head>
+<body>
+ 
+<div><span>山田</span>太郎</div>
+<div>次郎</div>
+<div>三郎</div>
+<div>花子</div>
+ 
+</body>
+</html>

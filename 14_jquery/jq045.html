@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<style type="text/css">
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+jQuery(function ($) {
+  //イベントの基本形
+  //https://api.jquery.com/on/
+  $("#click_me").on("click",function() {
+    alert("呼びましたか?");
+  });
+});
+</script>
+</head>
+<body>
+  
+  <form>
+    <input type="button" id="click_me" value="クリックしてね">
+  </form>
+
+</body>
+</html>
